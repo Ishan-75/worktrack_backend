@@ -17,6 +17,10 @@ CREATE TABLE IF NOT EXISTS work_logs (
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Server is running on Render 🚀");
+});
+
 app.post("/worklog", (req, res) => {
 const {
   startTime,
